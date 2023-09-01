@@ -16,6 +16,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
@@ -57,64 +58,66 @@ class _HomeState extends State<Home> {
                       borderRadius: BorderRadius.circular(50)),
                   child: const Padding(
                     padding: EdgeInsets.all(30),
-                    child: Column(
-                      children: [
-                        Text(
-                          'Sign Up',
-                          style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                        SizedBox(
-                          width: 105,
-                          child: Divider(
-                            thickness: 4,
-                            color: Colors.blue,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Text(
+                            'Sign Up',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.person,
-                                color: Colors.blue,
-                              ),
-                              hintText: 'Full Name'),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.email,
-                                color: Colors.blue,
-                              ),
-                              hintText: 'Email address'),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.lock,
-                                color: Colors.blue,
-                              ),
-                              hintText: 'Password'),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        CircleAvatar(
-                          backgroundColor: Colors.blue,
-                          radius: 40,
-                          child: Icon(Icons.arrow_forward_ios,color: Colors.white,),
-                        ),
-                      ],
+                          SizedBox(
+                            width: 105,
+                            child: Divider(
+                              thickness: 4,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.person,
+                                  color: Colors.blue,
+                                ),
+                                hintText: 'Full Name'),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: Colors.blue,
+                                ),
+                                hintText: 'Email address'),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.lock,
+                                  color: Colors.blue,
+                                ),
+                                hintText: 'Password'),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          CircleAvatar(
+                            backgroundColor: Colors.blue,
+                            radius: 40,
+                            child: Icon(Icons.arrow_forward_ios,color: Colors.white,),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
